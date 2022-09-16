@@ -1,24 +1,185 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Tab Bar Controller-->
+        <scene sceneID="0nx-MA-ThF">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tabBarController id="K38-by-nKt" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IY4-hw-uT4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="teB-ep-mlk" kind="relationship" relationship="viewControllers" id="MPw-b0-75g"/>
+                        <segue destination="dD4-8L-DCA" kind="relationship" relationship="viewControllers" id="c1O-Fm-hLi"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6vk-9H-CDK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-1561" y="-374"/>
+        </scene>
+        <!--혈압-->
+        <scene sceneID="0tc-bO-xmH">
+            <objects>
+                <navigationController id="teB-ep-mlk" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="혈압" image="heart" catalog="system" selectedImage="heart.fill" id="DTr-kI-K5I"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="he4-J0-6Xo">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9J6-dm-lae" kind="relationship" relationship="rootViewController" id="lwJ-rP-qYI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hty-GX-bUu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-458" y="-545"/>
+        </scene>
+        <!--혈압 측정 기록-->
+        <scene sceneID="9jb-CJ-bE0">
+            <objects>
+                <viewController id="9J6-dm-lae" customClass="ViewController" customModule="BloodPressure" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7uj-t0-XHn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EOp-Hh-yvJ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ads-MN-ADO">
+                                    <size key="itemSize" width="414" height="150"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="FXt-Mb-UdK" customClass="BloodPressureCell" customModule="BloodPressure">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODP-gL-yxn">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="YYYY년MM월DD일 hh:mm" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMp-1k-QYi">
+                                                    <rect key="frame" x="12" y="12" width="206" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="YaB-Sw-f1q"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="iyT-59-jZk">
+                                                    <rect key="frame" x="12" y="101" width="382" height="20.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="수축기 : nnnmmHg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMq-MH-oQZ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="137" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이완기 : nnnmmHg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9J-m7-kxn">
+                                                            <rect key="frame" x="155" y="0.0" width="137" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="맥박 : n/분" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nHL-lC-Vfr">
+                                                            <rect key="frame" x="310" y="0.0" width="72" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="정상" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0d4-r3-aZf">
+                                                    <rect key="frame" x="324" y="32" width="29.5" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="iyT-59-jZk" secondAttribute="bottom" constant="27.5" id="J7Z-8D-i5O"/>
+                                                <constraint firstItem="sMp-1k-QYi" firstAttribute="top" secondItem="ODP-gL-yxn" secondAttribute="top" constant="12" id="OaD-F7-rNV"/>
+                                                <constraint firstAttribute="trailing" secondItem="sMp-1k-QYi" secondAttribute="trailing" constant="248" id="Spr-hR-cYM"/>
+                                                <constraint firstItem="iyT-59-jZk" firstAttribute="top" secondItem="0d4-r3-aZf" secondAttribute="bottom" constant="49" id="WCC-aX-7Gv"/>
+                                                <constraint firstItem="0d4-r3-aZf" firstAttribute="top" secondItem="ODP-gL-yxn" secondAttribute="top" constant="32" id="eaN-tf-89l"/>
+                                                <constraint firstItem="0d4-r3-aZf" firstAttribute="leading" secondItem="ODP-gL-yxn" secondAttribute="leading" constant="324" id="ee4-P7-kih"/>
+                                                <constraint firstItem="iyT-59-jZk" firstAttribute="leading" secondItem="sMp-1k-QYi" secondAttribute="leading" id="iON-jj-aDx"/>
+                                                <constraint firstItem="0d4-r3-aZf" firstAttribute="centerY" secondItem="sMp-1k-QYi" secondAttribute="centerY" id="sB8-Iw-ykE"/>
+                                                <constraint firstItem="sMp-1k-QYi" firstAttribute="leading" secondItem="ODP-gL-yxn" secondAttribute="leading" constant="12" id="uQ0-Hv-8XM"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <constraints>
+                                            <constraint firstItem="ODP-gL-yxn" firstAttribute="leading" secondItem="FXt-Mb-UdK" secondAttribute="leadingMargin" constant="-8" id="Sfs-7l-NPc"/>
+                                            <constraint firstItem="ODP-gL-yxn" firstAttribute="top" secondItem="FXt-Mb-UdK" secondAttribute="topMargin" constant="-8" id="nqz-aK-qEX"/>
+                                        </constraints>
+                                        <size key="customSize" width="414" height="150"/>
+                                        <connections>
+                                            <outlet property="DateLabel" destination="sMp-1k-QYi" id="QnU-Bo-FwB"/>
+                                            <outlet property="DiastolicLabel" destination="n9J-m7-kxn" id="pH2-EB-Wc9"/>
+                                            <outlet property="PulseLabel" destination="nHL-lC-Vfr" id="Pxh-7h-1ZN"/>
+                                            <outlet property="SystolicLabel" destination="aMq-MH-oQZ" id="pkZ-Tp-wvY"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="prefetchDataSource" destination="kJO-Wa-yoq" id="VwF-T3-J0Y"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="26Q-hi-Bmb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="26Q-hi-Bmb" firstAttribute="trailing" secondItem="EOp-Hh-yvJ" secondAttribute="trailing" id="DtM-Cz-2Z2"/>
+                            <constraint firstItem="EOp-Hh-yvJ" firstAttribute="leading" secondItem="26Q-hi-Bmb" secondAttribute="leading" id="E3a-AP-ubb"/>
+                            <constraint firstItem="26Q-hi-Bmb" firstAttribute="bottom" secondItem="EOp-Hh-yvJ" secondAttribute="bottom" id="QGe-Yt-PzA"/>
+                            <constraint firstItem="EOp-Hh-yvJ" firstAttribute="top" secondItem="26Q-hi-Bmb" secondAttribute="top" id="brC-sF-xtJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="혈압 측정 기록" id="kJO-Wa-yoq">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="eVy-qT-W6g"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="EOp-Hh-yvJ" id="khG-87-0E8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eaU-7B-pfe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="251" y="-537"/>
+        </scene>
+        <!--추이-->
+        <scene sceneID="55p-jU-jvY">
+            <objects>
+                <navigationController id="dD4-8L-DCA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="추이" image="scroll" catalog="system" selectedImage="scroll.fill" id="UgK-3f-GDg"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="x0P-1R-GsU">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cmq-9c-yyH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-457" y="116"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="scroll" catalog="system" width="128" height="116"/>
+        <image name="scroll.fill" catalog="system" width="128" height="116"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

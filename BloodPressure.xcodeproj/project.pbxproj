@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		681BE60828CB9793001531CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681BE60728CB9793001531CB /* AppDelegate.swift */; };
 		681BE60A28CB9793001531CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681BE60928CB9793001531CB /* SceneDelegate.swift */; };
-		681BE60C28CB9793001531CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681BE60B28CB9793001531CB /* ViewController.swift */; };
 		681BE60F28CB9793001531CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 681BE60D28CB9793001531CB /* Main.storyboard */; };
 		681BE61128CB9794001531CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 681BE61028CB9794001531CB /* Assets.xcassets */; };
 		681BE61428CB9794001531CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 681BE61228CB9794001531CB /* LaunchScreen.storyboard */; };
+		681BE61C28CBA2F0001531CB /* BloodPressure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681BE61B28CBA2F0001531CB /* BloodPressure.swift */; };
+		681BE61E28CBA37A001531CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681BE61D28CBA37A001531CB /* ViewController.swift */; };
+		681BE62028CBA3D6001531CB /* BloodPressureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681BE61F28CBA3D6001531CB /* BloodPressureCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		681BE60428CB9793001531CB /* BloodPressure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BloodPressure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		681BE60728CB9793001531CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		681BE60928CB9793001531CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		681BE60B28CB9793001531CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		681BE60E28CB9793001531CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		681BE61028CB9794001531CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		681BE61328CB9794001531CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		681BE61528CB9794001531CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		681BE61B28CBA2F0001531CB /* BloodPressure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodPressure.swift; sourceTree = "<group>"; };
+		681BE61D28CBA37A001531CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		681BE61F28CBA3D6001531CB /* BloodPressureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodPressureCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +62,10 @@
 			children = (
 				681BE60728CB9793001531CB /* AppDelegate.swift */,
 				681BE60928CB9793001531CB /* SceneDelegate.swift */,
-				681BE60B28CB9793001531CB /* ViewController.swift */,
 				681BE60D28CB9793001531CB /* Main.storyboard */,
+				681BE61B28CBA2F0001531CB /* BloodPressure.swift */,
+				681BE61D28CBA37A001531CB /* ViewController.swift */,
+				681BE61F28CBA3D6001531CB /* BloodPressureCell.swift */,
 				681BE61028CB9794001531CB /* Assets.xcassets */,
 				681BE61228CB9794001531CB /* LaunchScreen.storyboard */,
 				681BE61528CB9794001531CB /* Info.plist */,
@@ -138,9 +144,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				681BE60C28CB9793001531CB /* ViewController.swift in Sources */,
 				681BE60828CB9793001531CB /* AppDelegate.swift in Sources */,
 				681BE60A28CB9793001531CB /* SceneDelegate.swift in Sources */,
+				681BE61E28CBA37A001531CB /* ViewController.swift in Sources */,
+				681BE62028CBA3D6001531CB /* BloodPressureCell.swift in Sources */,
+				681BE61C28CBA2F0001531CB /* BloodPressure.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
