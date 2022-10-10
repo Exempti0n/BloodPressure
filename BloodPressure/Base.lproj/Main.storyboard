@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -33,7 +34,7 @@
                 <navigationController id="teB-ep-mlk" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="혈압" image="heart" catalog="system" selectedImage="heart.fill" id="DTr-kI-K5I"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="he4-J0-6Xo">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -52,8 +53,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EOp-Hh-yvJ">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EOp-Hh-yvJ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="721"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ads-MN-ADO">
                                     <size key="itemSize" width="414" height="150"/>
@@ -101,27 +102,28 @@
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="정상" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0d4-r3-aZf">
-                                                    <rect key="frame" x="324" y="32" width="29.5" height="20"/>
+                                                    <rect key="frame" x="376" y="32" width="29.5" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="0d4-r3-aZf" secondAttribute="trailing" constant="52.5" id="Aur-Bd-eFn"/>
                                                 <constraint firstAttribute="bottom" secondItem="iyT-59-jZk" secondAttribute="bottom" constant="27.5" id="J7Z-8D-i5O"/>
                                                 <constraint firstItem="sMp-1k-QYi" firstAttribute="top" secondItem="ODP-gL-yxn" secondAttribute="top" constant="12" id="OaD-F7-rNV"/>
                                                 <constraint firstAttribute="trailing" secondItem="sMp-1k-QYi" secondAttribute="trailing" constant="248" id="Spr-hR-cYM"/>
                                                 <constraint firstItem="iyT-59-jZk" firstAttribute="top" secondItem="0d4-r3-aZf" secondAttribute="bottom" constant="49" id="WCC-aX-7Gv"/>
                                                 <constraint firstItem="0d4-r3-aZf" firstAttribute="top" secondItem="ODP-gL-yxn" secondAttribute="top" constant="32" id="eaN-tf-89l"/>
-                                                <constraint firstItem="0d4-r3-aZf" firstAttribute="leading" secondItem="ODP-gL-yxn" secondAttribute="leading" constant="324" id="ee4-P7-kih"/>
+                                                <constraint firstItem="0d4-r3-aZf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ODP-gL-yxn" secondAttribute="leading" constant="20" symbolic="YES" id="ee4-P7-kih"/>
                                                 <constraint firstItem="iyT-59-jZk" firstAttribute="leading" secondItem="sMp-1k-QYi" secondAttribute="leading" id="iON-jj-aDx"/>
                                                 <constraint firstItem="0d4-r3-aZf" firstAttribute="centerY" secondItem="sMp-1k-QYi" secondAttribute="centerY" id="sB8-Iw-ykE"/>
                                                 <constraint firstItem="sMp-1k-QYi" firstAttribute="leading" secondItem="ODP-gL-yxn" secondAttribute="leading" constant="12" id="uQ0-Hv-8XM"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <constraints>
-                                            <constraint firstItem="ODP-gL-yxn" firstAttribute="leading" secondItem="FXt-Mb-UdK" secondAttribute="leadingMargin" constant="-8" id="Sfs-7l-NPc"/>
-                                            <constraint firstItem="ODP-gL-yxn" firstAttribute="top" secondItem="FXt-Mb-UdK" secondAttribute="topMargin" constant="-8" id="nqz-aK-qEX"/>
+                                            <constraint firstItem="ODP-gL-yxn" firstAttribute="leading" secondItem="FXt-Mb-UdK" secondAttribute="leadingMargin" constant="-8" id="6Vb-9I-GxM"/>
+                                            <constraint firstItem="ODP-gL-yxn" firstAttribute="top" secondItem="FXt-Mb-UdK" secondAttribute="topMargin" constant="-8" id="WCA-r0-KCz"/>
                                         </constraints>
                                         <size key="customSize" width="414" height="150"/>
                                         <connections>
@@ -147,7 +149,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="혈압 측정 기록" id="kJO-Wa-yoq">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="eVy-qT-W6g"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="eVy-qT-W6g">
+                            <connections>
+                                <segue destination="z5t-ae-HmC" kind="show" id="6Fg-bw-maa"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="EOp-Hh-yvJ" id="khG-87-0E8"/>
@@ -155,7 +161,40 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eaU-7B-pfe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="251" y="-537"/>
+            <point key="canvasLocation" x="343" y="-545"/>
+        </scene>
+        <!--혈압 추가-->
+        <scene sceneID="Z1q-FR-umz">
+            <objects>
+                <viewController id="z5t-ae-HmC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gCY-xY-awI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="날짜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deb-cO-ZK2">
+                                <rect key="frame" x="24" y="116" width="366" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SxC-ve-dzQ">
+                                <rect key="frame" x="24" y="169" width="366" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KlW-Ra-JiK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="혈압 추가" id="E4e-iL-diq">
+                        <barButtonItem key="rightBarButtonItem" title="등록" id="L69-Iz-xk8"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lXP-KM-m0H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1127.536231884058" y="-545.08928571428567"/>
         </scene>
         <!--추이-->
         <scene sceneID="55p-jU-jvY">
@@ -163,7 +202,7 @@
                 <navigationController id="dD4-8L-DCA" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="추이" image="scroll" catalog="system" selectedImage="scroll.fill" id="UgK-3f-GDg"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="x0P-1R-GsU">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                 </navigationController>
@@ -173,10 +212,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="heart" catalog="system" width="128" height="109"/>
-        <image name="heart.fill" catalog="system" width="128" height="109"/>
+        <image name="heart" catalog="system" width="128" height="107"/>
+        <image name="heart.fill" catalog="system" width="128" height="107"/>
         <image name="plus" catalog="system" width="128" height="113"/>
-        <image name="scroll" catalog="system" width="128" height="116"/>
+        <image name="scroll" catalog="system" width="128" height="114"/>
         <image name="scroll.fill" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
